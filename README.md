@@ -138,15 +138,3 @@ uv run --extra dev pytest -m integration  # live CockroachDB cluster + LLM
 
 > The env prefix is `COCKROARCH_*` — a historical typo, but consistent across
 > the codebase and `.env.example`; do not "fix" it.
-
-## Status
-
-| Piece | State |
-|---|---|
-| Agent graph (7 nodes) + `POST /alerts` webhook | ✅ implemented, unit + integration tested |
-| RAG long-term memory on CockroachDB | ✅ live — semantic (not keyword) recall verified |
-| Runbook knowledge + decide logic | ✅ live — execution is simulate-only (V1) |
-| CloudWatch observation (logs + metrics) | ✅ implemented — needs AWS creds + running stock_app for live data |
-| stock_app on ECS Fargate | ✅ deployed — GitHub Actions CI/CD (OIDC, no stored keys) |
-| Agent backend on ECS Fargate | ⏳ next — containerize: Dockerfile + task def + read-only CloudWatch IAM |
-| Frontend | ⏳ placeholder — Next.js starter |
