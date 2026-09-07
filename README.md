@@ -1,6 +1,5 @@
-# Incident Pilot SRE Assistance
-
-AI-powered SRE incident investigation agent. When an alert arrives, the agent:
+# Observe Bot
+AI-powered incident investigation agent. When an alert arrives, the agent:
 
 1. **Recalls** similar past incidents from long-term memory (CockroachDB vector RAG)
 2. **Observes** the target app's live telemetry (CloudWatch logs + metrics)
